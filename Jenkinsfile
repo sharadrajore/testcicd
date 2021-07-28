@@ -2,12 +2,7 @@ pipeline {
     agent any
 
     stages {
-          stage('Checkout') {
-            steps {
-                echo 'Checking out'
-                git  url: 'https://github.com/sharadrajore/testcicd.git'
-            }
-        }
+          
             stage('Build') {
              steps {
                 echo 'Building'
@@ -21,7 +16,7 @@ pipeline {
             }
             }
             stage('Deploy') {
-             steps {
+             steps {ss
                 echo 'Deploying '
                 deploy adapters: [tomcat8(credentialsId: 'tomcat-creds', path: '', url: 'http://localhost:9090/')], contextPath: null, war: '**/*.war'
             }
