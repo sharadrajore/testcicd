@@ -15,6 +15,7 @@ public class HelloWorldApplication extends SpringBootServletInitializer{
 	}
 
 	public static void main(String[] args) {
+		System.out.println("Ram");
 		SpringApplication.run(HelloWorldApplication.class, args);
 	}
 	
